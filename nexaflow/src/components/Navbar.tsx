@@ -169,9 +169,9 @@ export default function Navbar({ onOpenAuth }: { onOpenAuth: (v: 'login' | 'sign
               duration: 0.4, 
               ease: LUXURY_EASE,
             }}
-            className={`w-full h-[62px] relative flex items-center justify-between mx-auto rounded-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] px-6 sm:px-8 ${
+            className={`w-full h-[68px] relative flex items-center justify-between mx-auto rounded-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] px-6 sm:px-8 ${
               scrolled
-                ? 'bg-white/85 backdrop-blur-2xl shadow-[0_2px_12px_rgba(15,23,42,0.03)] border border-slate-200/70'
+                     ? 'bg-white/85 backdrop-blur-2xl shadow-[0_2px_12px_rgba(15,23,42,0.03)] border border-slate-200/70'
                 : 'bg-white/75 backdrop-blur-xl border border-slate-200/50 shadow-[0_2px_8px_rgba(15,23,42,0.02)]'
             }`}
           >
