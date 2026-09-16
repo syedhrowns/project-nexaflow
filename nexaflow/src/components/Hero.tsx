@@ -18,9 +18,7 @@ export default function Hero({ onStartFree }: { onStartFree: () => void }) {
 
         }}
       />
-      {/* Soft gradient overlay for text legibility while letting bottom flow extend */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/55 to-white/90 sm:from-white/30 sm:via-white/50 sm:to-white/80 z-0 pointer-events-none" />
-
+     
       {/* Subtle floating background ambient glows */}
       <motion.div 
         animate={{ y: [-8, 8, -8], opacity: [0.12, 0.18, 0.12] }}
