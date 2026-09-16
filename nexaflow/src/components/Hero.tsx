@@ -5,7 +5,7 @@ const LUXURY_EASE = [0.16, 1, 0.3, 1] as const;
 
 export default function Hero({ onStartFree }: { onStartFree: () => void }) {
   return (
-    <section id="hero" className="relative w-full pt-36 pb-20 lg:pt-44 lg:pb-32 px-6 flex flex-col items-center justify-center overflow-hidden">
+    <section id="hero" className="relative w-full min-h-screen min-h-[100dvh] pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 px-6 flex flex-col items-center justify-center overflow-hidden">
       
       {/* Hero Background Image */}
       <motion.div 
@@ -33,7 +33,7 @@ export default function Hero({ onStartFree }: { onStartFree: () => void }) {
         className="absolute bottom-[20%] right-[10%] w-88 h-88 bg-blue-900/15 rounded-full blur-[100px] pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10 mt-[50px] pl-[1px]">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10 my-auto pl-[1px]">
         
         {/* Text Content (7 cols on lg) */}
         <div className="-mt-[70px] mb-0 sm:my-0 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
