@@ -180,8 +180,8 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
                   pointerEvents: diff === 0 ? 'auto' : 'none',
                 }}
                 transition={{
-                  duration: 0.30,
-                  ease: LUXURY_EASE,
+                  duration: 1.0,
+                  ease: [0.25, 1, 0.5, 1],
                 }}
                 className="absolute w-full max-w-lg px-4"
               >
@@ -218,7 +218,6 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
                       
                       {item.quote ? (
                         <p className="text-slate-600 text-sm sm:text-base leading-relaxed line-clamp-3 font-normal">
-                          "{item.quote}"
                         </p>
                       ) : (
                         <div className="space-y-2">
@@ -259,7 +258,7 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
               key={i}
               onClick={() => setCurrentIndex(i)}
               aria-label={`Go to slide ${i + 1}`}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${
+              className={`transition-all duration-500 rounded-full cursor-pointer ${
                 currentIndex === i 
                   ? 'w-8 h-2 bg-blue-900' 
                   : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'
