@@ -94,9 +94,11 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
 
   useEffect(() => {
     if (isPaused) return;
-    const timer = setInterval(handleNext, autoPlayInterval);
-    return () => clearInterval(timer);
-  }, [handleNext, isPaused, autoPlayInterval]);
+     const timer = setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % items.length);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [currentIndex, isPaused, items.length]);
 
   const getPosition = (index: number) => {
     const diff = (index - currentIndex + items.length) % items.length;
