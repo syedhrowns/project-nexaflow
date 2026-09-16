@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import { 
-  Star, 
-  ChevronLeft, 
-  ChevronRight, 
+  Star,  
   CheckCircle2, 
   Quote 
 } from 'lucide-react';
@@ -79,7 +77,7 @@ const defaultReviews: ReviewItem[] = [
 
 export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
   items = defaultReviews,
-  autoPlayInterval = 4500,
+  autoPlayInterval = 3000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -182,7 +180,7 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
                   pointerEvents: diff === 0 ? 'auto' : 'none',
                 }}
                 transition={{
-                  duration: 0.45,
+                  duration: 0.30,
                   ease: LUXURY_EASE,
                 }}
                 className="absolute w-full max-w-lg px-4"
@@ -252,29 +250,6 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
               </motion.div>
             );
           })}
-
-          {/* Navigation Controls */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-            onClick={handlePrev}
-            aria-label="Previous slide"
-            className="absolute left-2 sm:left-4 z-40 w-11 h-11 rounded-full bg-white/90 border border-slate-200 text-slate-900 flex items-center justify-center hover:bg-blue-900 hover:text-white hover:border-blue-900 transition-colors cursor-pointer shadow-xs"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </motion.button>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-            onClick={handleNext}
-            aria-label="Next slide"
-            className="absolute right-2 sm:right-4 z-40 w-11 h-11 rounded-full bg-white/90 border border-slate-200 text-slate-900 flex items-center justify-center hover:bg-blue-900 hover:text-white hover:border-blue-900 transition-colors cursor-pointer shadow-xs"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </motion.button>
         </div>
 
         {/* Carousel Pagination Dots */}
