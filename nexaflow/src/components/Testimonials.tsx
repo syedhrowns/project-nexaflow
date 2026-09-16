@@ -95,7 +95,7 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
     if (isPaused) return;
     const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % items.length);
-    }, 3500);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [currentIndex, isPaused, items.length]);
 
@@ -181,7 +181,7 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
                   pointerEvents: diff === 0 ? 'auto' : 'none',
                 }}
                 transition={{
-                  duration: 0.9,
+                  duration: 1.0,
                   ease: [0.25, 1, 0.5, 1],
                 }}
                 className="absolute w-full max-w-lg px-4"
