@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import { 
-  Star,  
-  CheckCircle2, 
-  Quote 
+  Star, 
+  CheckCircle2 
 } from 'lucide-react';
 
 export interface ReviewItem {
@@ -94,9 +93,9 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
 
   useEffect(() => {
     if (isPaused) return;
-     const timer = setTimeout(() => {
+    const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % items.length);
-    }, 3000);
+    }, 3500);
     return () => clearTimeout(timer);
   }, [currentIndex, isPaused, items.length]);
 
@@ -182,18 +181,15 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
                   pointerEvents: diff === 0 ? 'auto' : 'none',
                 }}
                 transition={{
-                  duration: 1.0,
+                  duration: 0.9,
                   ease: [0.25, 1, 0.5, 1],
                 }}
                 className="absolute w-full max-w-lg px-4"
               >
-                <div className="glass-panel p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between h-[360px] sm:h-[320px]">
+                <div className="glass-panel no-hover p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between h-[360px] sm:h-[320px]">
                   
                   {/* Top Ambient Specular Sheen */}
                   <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-white/60 via-white/20 to-transparent pointer-events-none" />
-
-                  {/* Decorative Background Quote Icon */}
-                  <Quote className="absolute right-6 top-6 w-20 h-20 text-slate-900/[0.04] -rotate-12 pointer-events-none" />
 
                   {/* Top Bar: Star Ratings & Verification Chip */}
                   <div className="relative z-10">
@@ -220,6 +216,7 @@ export const ReviewsSectionLayout: React.FC<ReviewsSectionProps> = ({
                       
                       {item.quote ? (
                         <p className="text-slate-600 text-sm sm:text-base leading-relaxed line-clamp-3 font-normal">
+                          {item.quote}
                         </p>
                       ) : (
                         <div className="space-y-2">
