@@ -457,7 +457,7 @@ export default function UpcomingFeaturesPage() {
 
               {/* Interactive Visual Flow Diagram */}
               <div className="mt-8 pt-2 pb-2 overflow-x-auto no-scrollbar">
-                <div className="min-w-[760px] p-6 bg-slate-50/70 rounded-2xl border border-slate-200 flex items-stretch justify-between gap-3 sm:gap-4">
+                <div className="w-[890.972px] min-w-[890.972px] lg:mx-auto p-6 bg-slate-50/70 rounded-2xl border border-slate-200 flex items-stretch justify-between gap-3 sm:gap-4">
                   {/* Step 1: Input */}
                   <div className="flex-1 min-w-[130px] h-[190px] text-center p-4 bg-white rounded-2xl border border-slate-200 shadow-2xs flex flex-col justify-between items-center">
                     <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center shrink-0">
