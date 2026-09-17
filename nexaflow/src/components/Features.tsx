@@ -138,7 +138,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.4, ease: LUXURY_EASE }}
-            className="md:col-span-2 p-8 md:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col items-start justify-center group hover-item relative overflow-hidden"
+            className="md:col-span-2 lg:col-span-2 p-8 md:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col items-start justify-center group hover-item relative overflow-hidden"
           >
             <div className="relative z-10">
               <div className="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6">
