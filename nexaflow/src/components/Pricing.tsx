@@ -153,7 +153,7 @@ export default function Pricing({ onOpenAuth }: { onOpenAuth?: (view: 'login' | 
         </div>
 
         {/* Pricing Cards Grid - Refined with rounded-32px and exact reference spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto hover-group">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto hover-group">
           {plans.map((plan, index) => {
             const currentPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice;
 
@@ -168,7 +168,7 @@ export default function Pricing({ onOpenAuth }: { onOpenAuth?: (view: 'login' | 
                   y: { duration: 0.65, delay: index * 0.08, ease: LUXURY_EASE },
                   default: { duration: 0.3, ease: LUXURY_EASE }
                 }}
-                className={`relative flex flex-col justify-between p-8 sm:p-10 cursor-default hover-item rounded-[32px] transition-all duration-400 ${
+                className={`relative flex flex-col justify-between p-6 md:p-8 lg:p-10 cursor-default hover-item rounded-[32px] transition-all duration-400 ${
                   plan.popular 
                     ? 'bg-white ring-1 ring-slate-200 shadow-[0_24px_48px_-12px_rgba(30,58,138,0.1)]' 
                     : 'bg-white border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)]'
