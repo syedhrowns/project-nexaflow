@@ -51,7 +51,7 @@ export default function Hero({ onStartFree }: { onStartFree: () => void }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.05, ease: LUXURY_EASE }}
-            className="text-[65px] font-bold tracking-tight text-slate-900 leading-[60px] sm:leading-[1.1] lg:leading-[65px]"
+            className="text-5xl sm:text-6xl lg:text-[65px] font-bold tracking-tight text-slate-900 leading-[1.1] sm:leading-[1.1] lg:leading-[65px]"
           >
             Automate the work.<br/>
             <span className="text-blue-900">
