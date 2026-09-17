@@ -51,7 +51,7 @@ export default function Features() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto hover-group">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto hover-group">
           
           {/* Card 1: AI Agents (Span 2) */}
           <motion.div
@@ -59,7 +59,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.1, ease: LUXURY_EASE }}
-            className="md:col-span-2 p-8 md:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col justify-center items-start group hover-item relative overflow-hidden"
+            className="md:col-span-2 lg:col-span-2 p-8 md:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col justify-center items-start group hover-item relative overflow-hidden"
           >
             <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[120%] bg-blue-50/50 rounded-full blur-[80px] pointer-events-none group-hover:bg-blue-100/50 transition-colors duration-700" />
             
